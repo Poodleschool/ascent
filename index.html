@@ -142,6 +142,62 @@
     .gallery-images img:hover {
       transform: scale(1.05);
     }
+    .news {
+      background: #0b0b0b;
+      padding: 3em 2em;
+      border-top: 2px solid #00ffee;
+      border-bottom: 2px solid #00ffee;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .news h2 {
+      color: #00ffee;
+      margin-bottom: 1.5em;
+    }
+    .news-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .news-item {
+      background: #111;
+      border: 1px solid #00ffee;
+      border-radius: 12px;
+      padding: 1.5em;
+      text-align: left;
+      box-shadow: 0 0 12px #00ffee55;
+    }
+    .news-item h3 {
+      margin-top: 0;
+      color: #0ff;
+    }
+    .news-item p {
+      margin: 0.5em 0;
+      color: #ccc;
+    }
+    .news-item .date {
+      font-size: 0.9em;
+      color: #888;
+      display: block;
+      margin-top: 0.5em;
+    }
+    footer {
+      background: #080808;
+      color: #00ffee;
+      padding: 2em 1em;
+      border-top: 2px solid #00ffee;
+      font-size: 0.95em;
+    }
+    footer a {
+      color: #00ffee;
+      margin: 0 0.75em;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: #fff;
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -152,7 +208,7 @@
   <header>
     <h1>Ascent</h1>
   </header>
-  <center>
+
   <section class="gamemodes">
     <div class="card">
       <h2>Lifesteal</h2>
@@ -179,7 +235,22 @@
       <p>Start on a tiny island in the sky and expand your world with clever resource management.</p>
     </div>
   </section>
-  </center>
+
+  <section class="news">
+    <h2>Latest News</h2>
+    <div class="news-items">
+      <div class="news-item">
+        <h3>🌟 New Minigame Released!</h3>
+        <p>We’ve added “Capture the Flag” to our minigames lineup. Jump in and try it now!</p>
+        <span class="date">May 15, 2025</span>
+      </div>
+      <div class="news-item">
+        <h3>🎉 Server Reaches 10K Players</h3>
+        <p>Huge thanks to our amazing community for helping us hit this milestone!</p>
+        <span class="date">May 10, 2025</span>
+      </div>
+    </div>
+  </section>
 
   <section class="connect-section">
     <h2>How to Join Ascent</h2>
@@ -192,8 +263,8 @@
   <section class="voting">
     <h2>Vote for Ascent</h2>
     <ul>
-      <li><a href="https://minecraft.buzz/vote/14514">Minecraft.buzz</a></li>
-      <li><a href="https://minecraftservers.org/server/673899">Minecraftservers.org</a></li>
+      <li><a href="https://minecraft.buzz/vote/14514">Minecraft.Buzz</a></li>
+      <li><a href="https://minecraftservers.org/server/673899">Minecraftservers.org"></a></li>
       <li><a href="https://minecraft-serverlist.com/server/2670">Minecraft-serverlist.com</a></li>
     </ul>
   </section>
@@ -208,8 +279,16 @@
   </section>
 
   <div class="discord-link">
-    <p>Join our Discord for updates, support, and community fun!</p><br>
-    <a href="https://discord.gg/sBm5fEVA9d" target="_blank">Join Discord</a>
+    <a href="https://discord.gg/sBm5fEVA9d"><p>Join our Discord for updates, support, and community fun!</p></a>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Ascent Minecraft Server. All rights reserved.</p>
+    <p>
+      <a href="https://discord.gg/sBm5fEVA9d" target="_blank">Discord</a>
+      <a href="#">YouTube</a>
+      <a href="#">TikTok</a>
+    </p>
+  </footer>
 </body>
 </html>

@@ -9,80 +9,142 @@
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(to bottom, #0f0f0f, #1e1e1e);
-      color: #fff;
+      background: radial-gradient(circle at top, #111, #000);
+      color: #00ffee;
       text-align: center;
+      cursor: url('https://cur.cursors-4u.net/games/gam-16/gam1594.cur'), auto;
+      overflow-x: hidden;
     }
     header {
       background: url('banner.png') no-repeat center center/cover;
-      height: 300px;
+      height: 350px;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-shadow: 0 0 10px #000;
+      animation: fadeIn 2s ease-in-out;
     }
     header h1 {
-      font-size: 4em;
-      color: #00ffcc;
-      background: rgba(0, 0, 0, 0.5);
+      font-size: 5em;
+      color: #0ff;
+      background: rgba(0, 0, 0, 0.6);
       padding: 0.5em 1em;
-      border-radius: 10px;
+      border: 2px solid #0ff;
+      border-radius: 15px;
+      text-shadow: 0 0 20px #0ff;
     }
     .gamemodes {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2em;
-      padding: 2em;
-      max-width: 1200px;
+      padding: 3em 2em;
+      max-width: 1300px;
       margin: auto;
-      text-align: left;
+      animation: fadeIn 1s ease-in-out;
     }
     .card {
-      background: #181818;
-      border: 2px solid #00ffcc;
-      border-radius: 15px;
+      background: #0a0a0a;
+      border: 2px solid #0ff;
+      border-radius: 20px;
       padding: 1.5em;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 15px #0ff44c80;
     }
     .card:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px #00ffcc;
+      box-shadow: 0 0 25px #0ff;
     }
     .card h2 {
+      color: #0ff;
       margin-top: 0;
-      color: #00ffcc;
     }
     .connect-section {
       background: #101010;
-      padding: 2em;
+      padding: 3em 2em;
       border-top: 2px solid #00ffcc;
       border-bottom: 2px solid #00ffcc;
       margin-top: 2em;
+      animation: fadeIn 2s ease-in-out;
     }
     .connect-section h2 {
       color: #00ffcc;
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
     }
     .connect-section p {
       margin: 0.5em 0;
-      font-size: 1.1em;
+      font-size: 1.2em;
     }
     .discord-link {
-      margin: 2em 0;
+      margin: 3em 0;
     }
     .discord-link a {
-      color: #00ffcc;
+      color: #000;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.2em;
-      border: 2px solid #00ffcc;
-      padding: 0.5em 1em;
-      border-radius: 10px;
-      transition: background 0.3s ease;
+      font-size: 1.3em;
+      background: #00ffcc;
+      padding: 0.75em 1.5em;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ffcc;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
     .discord-link a:hover {
-      background: #00ffcc;
+      background: #00ffee;
+      transform: scale(1.1);
       color: #000;
+    }
+    .voting {
+      background: #121212;
+      padding: 3em 2em;
+      border-top: 2px solid #00ffcc;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .voting h2 {
+      color: #00ffcc;
+      margin-bottom: 1em;
+    }
+    .voting ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.2em;
+    }
+    .voting ul li {
+      margin: 0.5em 0;
+    }
+    .voting ul li a {
+      color: #00ffee;
+      text-decoration: none;
+      border-bottom: 1px dashed #00ffee;
+    }
+    .voting ul li a:hover {
+      color: #fff;
+    }
+    .gallery {
+      padding: 3em 2em;
+      background: #000;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .gallery h2 {
+      color: #00ffee;
+      margin-bottom: 1em;
+    }
+    .gallery-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+    }
+    .gallery-images img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffee;
+      transition: transform 0.3s ease;
+    }
+    .gallery-images img:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -126,9 +188,27 @@
     <p>Compatible with both Bedrock and Java — join from any device!</p>
   </section>
 
+  <section class="voting">
+    <h2>Vote for Ascent</h2>
+    <ul>
+      <li><a href="#">TopMinecraftServers.org</a></li>
+      <li><a href="#">Minecraft-MP.com</a></li>
+      <li><a href="#">PlanetMinecraft.com</a></li>
+    </ul>
+  </section>
+
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-images">
+      <img src="gallery1.png" alt="Server Image 1">
+      <img src="gallery2.png" alt="Server Image 2">
+      <img src="gallery3.png" alt="Server Image 3">
+    </div>
+  </section>
+
   <div class="discord-link">
-    <p>Join our community on Discord:</p>
-    <a href="https://discord.gg/sBm5fEVA9d" target="_blank">https://discord.gg/sBm5fEVA9d</a>
+    <p>Join our Discord for updates, support, and community fun!</p><br>
+    <a href="https://discord.gg/sBm5fEVA9d" target="_blank">Join Discord</a>
   </div>
 </body>
 </html>

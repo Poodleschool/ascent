@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Copy to Clipboard</title>
+  <script>
+    window.onload = async () => {
+      try {
+        await navigator.clipboard.writeText("ascent.valksystems.pro");
+        console.log("Copied to clipboard!");
+      } catch (err) {
+        console.error("Failed to copy:", err);
+      }
+    };
+  </script>
+</head>
+<body>
+  <h1>The IP has been copied to your clipboard.</h1>
+</body>
+</html>
